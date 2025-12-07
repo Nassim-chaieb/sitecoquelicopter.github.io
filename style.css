@@ -11,7 +11,7 @@ body {
     margin:0;
     font-family: "BBHSansBartle-Regular", sans-serif;
 
-    background:#2458A6;   /* fond Arcane demandé */
+    background:#FFFFFF;   /* fond Arcane demandé */
     color: white;
 }
 
@@ -50,7 +50,7 @@ nav a {
     width:100%;
     padding:2rem 0;
 
-    background:rgba(255,255,255,0.12);
+    background:rgba(247, 239, 236,0.2);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
 
@@ -185,4 +185,5 @@ button {
 button:hover {
     background:#555;
 }
+
 
