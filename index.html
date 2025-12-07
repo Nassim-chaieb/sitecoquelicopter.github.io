@@ -1,63 +1,112 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Site modifié</title>
-<link rel="stylesheet" href="style.css" />
+
+<link rel="stylesheet" href="style.css">
+
 <script src="script.js"></script>
 
-<style>body{background:#FFFFFF;}</style>
+<form action="send.php" method="post">
+
 </head>
+
 <body>
+
 <nav>
-<ul>
-<li><a href="#">Accueil</a></li>
-<li><a href="#photos">Photos</a></li>
-<li><a href="#contact">Contact</a></li>
-</ul>
+    <ul>
+        <li><a href="#">Accueil</a></li>
+        <li><a href="#photos">Photos</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
 </nav>
 
-<!-- Rectangle Photos -->
+
+
+<!-- Photos -->
 <div class="section-box">
 <section class="photo-section" id="photos">
+
     <div class="track">
-        <img src="fig_jinx.jpg">
-        <img src="fig_jinx2.jpg">
-        <img src="chomp.png">
-        <img src="chompmicro2.jpg">
-        <img src="chompmicro.jpg">
 
         <img src="fig_jinx.jpg">
         <img src="fig_jinx2.jpg">
         <img src="chomp.png">
         <img src="chompmicro2.jpg">
         <img src="chompmicro.jpg">
+
+        <!-- duplicata pour effet infini -->
+        <img src="fig_jinx.jpg">
+        <img src="fig_jinx2.jpg">
+        <img src="chomp.png">
+        <img src="chompmicro2.jpg">
+        <img src="chompmicro.jpg">
+
     </div>
+
 </section>
 </div>
 
-<!-- Rectangle Catégories -->
+
+
+<!-- Catégories -->
 <div class="section-box">
-<div class="categories">
-<div class="categorie-btn"><img src="fig_jinx2.jpg"><span>Figurines</span></div>
-<div class="categorie-btn"><img src="chompmicro.jpg"><span>Objets</span></div>
-<div class="categorie-btn"><img src="chomp.png"><span>Porte clés</span></div>
-</div>
+
+    <div class="categories">
+
+        <div class="categorie-btn">
+            <img src="fig_jinx2.jpg">
+            <span>Figurines</span>
+        </div>
+
+        <div class="categorie-btn">
+            <img src="chompmicro.jpg">
+            <span>Objets</span>
+        </div>
+
+        <div class="categorie-btn">
+            <img src="chomp.png">
+            <span>Porte clés</span>
+        </div>
+
+    </div>
+
 </div>
 
-<!-- Rectangle Commander -->
+
+
+<!-- Commander -->
 <div class="section-box">
+
 <section class="contact-form" id="contact">
+
 <h2>Commander</h2>
+
 <form>
-<label>Nom :<input type="text" required></label>
-<label>Email :<input type="email" required></label>
-<label>Message :<textarea rows="5" required></textarea></label>
-<button type="submit">Envoyer</button>
+    <label>Nom :
+        <input type="text" required>
+    </label>
+
+    <label>Email :
+        <input type="email" required>
+    </label>
+
+    <label>Message :
+        <textarea rows="5" required></textarea>
+    </label>
+
+    <button type="submit">Envoyer</button>
 </form>
+
 </section>
+
 </div>
+
+
 
 </body>
 </html>
