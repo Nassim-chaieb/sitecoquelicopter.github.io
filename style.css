@@ -1,197 +1,187 @@
+/* -----------------------------
+   Police
+--------------------------------*/
+
 @font-face {
-    font-family : BBHSansBartle-Regular;
-    src: url(police/BBHSansBartle-Regular.ttf);
+    font-family: "BBHSansBartle-Regular";
+    src: url("police/BBHSansBartle-Regular.ttf") format("truetype");
 }
-
-
-
 
 body {
-    margin: 0;
-    font-family: BBHSansBartle-Regular;
+    margin:0;
+    font-family: "BBHSansBartle-Regular", sans-serif;
+
+    background:#2458A6;   /* fond Arcane demandé */
+    color: white;
 }
+
+
+
+/* -----------------------------
+   Navigation
+--------------------------------*/
 
 nav {
-    background: #2F8ECC;
-    padding: 1rem;
-}
-nav ul {
-    display: flex;
-    gap: 1rem;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-nav a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
+    background:#2F8ECC;
+    padding:1rem;
 }
 
+nav ul {
+    display:flex;
+    gap:1rem;
+    list-style:none;
+    margin:0;
+    padding:0;
+}
+
+nav a {
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+
+
+/* -----------------------------
+   Rectangles (glass + ombre)
+--------------------------------*/
 
 .section-box {
-    width: 100%;
-    padding: 2rem 0;
-    background:rgba(219, 213, 213, 0.5);
+    width:100%;
+    padding:2rem 0;
+
+    background:rgba(255,255,255,0.12);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
 
-    box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+    box-shadow:0 6px 18px rgba(0,0,0,0.25);
 
-    margin: 2rem 0;
+    margin:2rem 0;
 }
 
 .section-box > * {
-    width: 90%;
-    margin: auto;
+    width:90%;
+    margin:auto;
 }
 
 
-/* Catégories */
+
+/* -----------------------------
+   Catégories
+--------------------------------*/
+
 .categories {
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-    margin: 2rem;
+    display:flex;
+    justify-content:center;
+    gap:2rem;
 }
-.categorie-btn {
-    width:250px;
-    height:250px;
 
-    border-radius:12px;
-    overflow:hidden;
+.categorie-btn {
+    width:170px;
+    height:170px;
+
+    border-radius:14px;
+
     position:relative;
+    overflow:hidden;
+
+    cursor:pointer;
+
+    background:rgba(255,255,255,0.15);
+    backdrop-filter: blur(8px);
+
+    box-shadow:0 4px 12px rgba(0,0,0,0.25);
 }
+
 .categorie-btn img {
     width:100%;
     height:100%;
     object-fit:cover;
+
     filter: blur(3px) brightness(40%);
-    transition: .3s;
+    transition:.3s;
 }
+
 .categorie-btn:hover img {
     filter: blur(0) brightness(80%);
 }
+
 .categorie-btn span {
     position:absolute;
-    top:50%;left:50%;
+    top:50%;
+    left:50%;
     transform:translate(-50%,-50%);
-    color:white;
+
     font-weight:bold;
 }
 
-/* Carousel */
+
+
+/* -----------------------------
+   Carousel
+--------------------------------*/
+
 .photo-section {
-    position: relative;
-    overflow: hidden;
+    overflow:hidden;
 }
 
 .track {
-    display: flex;
+    display:flex;
     animation: scroll 20s linear infinite;
 }
 
 .track img {
     width:400px;
     height:300px;
+
     object-fit:cover;
+
     border-radius:8px;
+
     margin-right:1rem;
 }
 
-/* animation infinie parfaite */
 @keyframes scroll {
-    from {
-        transform: translateX(0);
-    }
-    to {
-        transform: translateX(-50%); 
-    }
+    from { transform: translateX(0); }
+    to   { transform: translateX(-50%); }
 }
 
-/* flèches */
 
-/*.arrow {
-    position:absolute;
-    top:50%;
-    transform:translateY(-50%);
-    padding:12px 18px;
-    background:rgba(0,0,0,0.35);
-    color:white;
-    font-size:22px;
-    border-radius:8px;
-    cursor:pointer;
-    user-select:none;
-}
 
-.arrow:hover {
-    background:rgba(0,0,0,0.55);
-}
+/* -----------------------------
+   Formulaire
+--------------------------------*/
 
-.left { left:10px; }
-.right { right:10px; }
-
-*/
-/* Form */
 .contact-form {
-    max-width:600px;
-    margin:2rem auto;
+    background:rgba(255,255,255,0.2);
     padding:1rem;
-    background:#f7f7f7;
     border-radius:8px;
 }
-.contact-form label { display:block; margin-top:1rem; }
-.contact-form input, .contact-form textarea { width:100%; padding:.5rem; margin-top:.5rem; }
-button { margin-top:1rem; padding:.7rem 1.2rem; background:#333; color:white; border:0; border-radius:4px; }
-/* Conteneur des catégories */
-.categories {
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-    margin: 2rem;
+
+.contact-form label {
+    display:block;
+    margin-top:1rem;
 }
 
-/* Rectangle de chaque catégorie */
-.categorie-btn {
-    width: 170px;
-    height: 170px;
-
-    border-radius: 14px;
-
-    background: #bcd4ff;   /* ← couleur du rectangle, tu peux changer */
-    
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    position: relative;
-    overflow: hidden;
-
-    cursor: pointer;
-}
-
-/* Image à l'intérieur */
-.categorie-btn img {
+.contact-form input,
+.contact-form textarea {
     width:100%;
-    height:100%;
-    object-fit:cover;
-
-    filter: blur(3px) brightness(40%);
-    transition: .3s;
+    padding:.5rem;
 }
 
-/* Texte centré */
-.categorie-btn span {
-    position: absolute;
-    color: white;
-    font-weight: bold;
+button {
+    margin-top:1rem;
+    padding:.7rem 1.2rem;
 
-    font-size: 1.1rem;
+    background:#333;
+    color:white;
 
-    pointer-events: none;
+    border:0;
+    border-radius:4px;
+
+    cursor:pointer;
 }
 
-/* Hover */
-.categorie-btn:hover img {
-    filter: blur(0) brightness(80%);
+button:hover {
+    background:#555;
 }
