@@ -1,0 +1,118 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+nav {
+    background: #333;
+    padding: 1rem;
+}
+nav ul {
+    display: flex;
+    gap: 1rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Catégories */
+.categories {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin: 2rem;
+}
+.categorie-btn {
+    width:250px;
+    height:250px;
+    
+    border-radius:12px;
+    overflow:hidden;
+    position:relative;
+}
+.categorie-btn img {
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    filter: blur(3px) brightness(40%);
+    transition: .3s;
+}
+.categorie-btn:hover img {
+    filter: blur(0) brightness(80%);
+}
+.categorie-btn span {
+    position:absolute;
+    top:50%;left:50%;
+    transform:translate(-50%,-50%);
+    color:white;
+    font-weight:bold;
+}
+
+/* Carousel */
+.photo-section {
+    position: relative;
+    overflow: hidden;
+}
+
+.track {
+    display: flex;
+    animation: scroll 20s linear infinite;
+}
+
+.track img {
+    width:400px;
+    height:300px;
+    object-fit:cover;
+    border-radius:8px;
+    margin-right:1rem;
+}
+
+/* animation infinie parfaite */
+@keyframes scroll {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%); 
+    }
+}
+
+/* flèches */
+
+/*.arrow {
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%);
+    padding:12px 18px;
+    background:rgba(0,0,0,0.35);
+    color:white;
+    font-size:22px;
+    border-radius:8px;
+    cursor:pointer;
+    user-select:none;
+}
+
+.arrow:hover {
+    background:rgba(0,0,0,0.55);
+}
+
+.left { left:10px; }
+.right { right:10px; }
+
+*/
+/* Form */
+.contact-form {
+    max-width:600px;
+    margin:2rem auto;
+    padding:1rem;
+    background:#f7f7f7;
+    border-radius:8px;
+}
+.contact-form label { display:block; margin-top:1rem; }
+.contact-form input, .contact-form textarea { width:100%; padding:.5rem; margin-top:.5rem; }
+button { margin-top:1rem; padding:.7rem 1.2rem; background:#333; color:white; border:0; border-radius:4px; }
