@@ -1,37 +1,29 @@
-document.addEventListener("DOMContentLoaded", () => {
-    
-    const track = document.querySelector(".track");
-    const left = document.getElementById("arrowLeft");
-    const right = document.getElementById("arrowRight");
+// Carousel auto défilement (version améliorée)
+// défilement ultra fluide et continu
 
-    let paused = false;
+document.addEventListener('DOMContentLoaded', () => {
+    const container = document.querySelector('.photo-section');
+    if(!container) return;
 
-    // pause au survol
-    track.addEventListener("mouseenter", () => {
-        track.style.animationPlayState = "paused";
-        paused = true;
-    });
+    let speed = 1; // px par frame
 
-    track.addEventListener("mouseleave", () => {
-        track.style.animationPlayState = "running";
-        paused = false;
-    });
+    function animate(){
+        container.scrollLeft += speed;
 
-    // flèches
-    left.onclick = () => {
-        track.style.transform = `translateX(${getX() + 300}px)`;
-    };
+        if(container.scrollLeft >= container.scrollWidth - container.clientWidth){
+            container.scrollLeft = 0;
+        }
 
-    right.onclick = () => {
-        track.style.transform = `translateX(${getX() - 300}px)`;
-    };
-
-    function getX(){
-        const m = getComputedStyle(track).transform;
-
-        if(m === "none") return 0;
-
-        return parseFloat(m.split(",")[4]);
+        requestAnimationFrame(animate);
     }
 
+    animate();
 });
+/* Effet glass + ombre pour catégories */
+.categorie-btn{
+    background: rgba(255,255,255,0.15);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+}
+
